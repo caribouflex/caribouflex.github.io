@@ -1,2 +1,246 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes"><title>arthur-tressol</title><meta name="description" content="My portfolio and cursus"><link rel="manifest" href="/manifest.json"><script>!function(a){"use strict";function b(a,b,c,e){var f=b&&b.prototype instanceof d?b:d,g=Object.create(f.prototype),h=new m(e||[]);return g._invoke=i(a,c,h),g}function c(a,b,c){try{return{type:"normal",arg:a.call(b,c)}}catch(a){return{type:"throw",arg:a}}}function d(){}function e(){}function f(){}function g(a){["next","throw","return"].forEach(function(b){a[b]=function(a){return this._invoke(b,a)}})}function h(a){function b(d,e,f,g){var h=c(a[d],a,e);if("throw"===h.type)g(h.arg);else{var i=h.arg,j=i.value;return j&&"object"===typeof j&&q.call(j,"__await")?Promise.resolve(j.__await).then(function(a){b("next",a,f,g)},function(a){b("throw",a,f,g)}):Promise.resolve(j).then(function(a){i.value=a,f(i)},g)}}function d(a,c){function d(){return new Promise(function(d,e){b(a,c,d,e)})}return e=e?e.then(d,d):d()}var e;this._invoke=d}function i(a,b,d){var e="suspendedStart";return function(f,g){if(e==="executing")throw new Error("Generator is already running");if("completed"===e){if("throw"===f)throw g;return o()}for(d.method=f,d.arg=g;;){var h=d.delegate;if(h){var i=j(h,d);if(i){if(i===x)continue;return i}}if("next"===d.method)d.sent=d._sent=d.arg;else if("throw"===d.method){if("suspendedStart"===e)throw e="completed",d.arg;d.dispatchException(d.arg)}else"return"===d.method&&d.abrupt("return",d.arg);e="executing";var k=c(a,b,d);if("normal"===k.type){if(e=d.done?"completed":"suspendedYield",k.arg===x)continue;return{value:k.arg,done:d.done}}"throw"===k.type&&(e="completed",d.method="throw",d.arg=k.arg)}}}function j(a,b){var d=a.iterator[b.method];if(void 0===d){if(b.delegate=null,"throw"===b.method){if(a.iterator.return&&(b.method="return",b.arg=void 0,j(a,b),"throw"===b.method))return x;b.method="throw",b.arg=new TypeError("The iterator does not provide a 'throw' method")}return x}var e=c(d,a.iterator,b.arg);if("throw"===e.type)return b.method="throw",b.arg=e.arg,b.delegate=null,x;var f=e.arg;if(!f)return b.method="throw",b.arg=new TypeError("iterator result is not an object"),b.delegate=null,x;if(f.done)b[a.resultName]=f.value,b.next=a.nextLoc,"return"!==b.method&&(b.method="next",b.arg=void 0);else return f;return b.delegate=null,x}function k(a){var b={tryLoc:a[0]};1 in a&&(b.catchLoc=a[1]),2 in a&&(b.finallyLoc=a[2],b.afterLoc=a[3]),this.tryEntries.push(b)}function l(a){var b=a.completion||{};b.type="normal",delete b.arg,a.completion=b}function m(a){this.tryEntries=[{tryLoc:"root"}],a.forEach(k,this),this.reset(!0)}function n(a){if(a){var b=a[s];if(b)return b.call(a);if("function"===typeof a.next)return a;if(!isNaN(a.length)){var c=-1,d=function b(){for(;++c<a.length;)if(q.call(a,c))return b.value=a[c],b.done=!1,b;return b.value=void 0,b.done=!0,b};return d.next=d}}return{next:o}}function o(){return{value:void 0,done:!0}}var p=Object.prototype,q=p.hasOwnProperty,r="function"===typeof Symbol?Symbol:{},s=r.iterator||"@@iterator",t=r.asyncIterator||"@@asyncIterator",u=r.toStringTag||"@@toStringTag",v="object"===typeof module,w=a.regeneratorRuntime;if(w)return void(v&&(module.exports=w));w=a.regeneratorRuntime=v?module.exports:{},w.wrap=b;var x={},y={};y[s]=function(){return this};var z=Object.getPrototypeOf,A=z&&z(z(n([])));A&&A!==p&&q.call(A,s)&&(y=A);var B=f.prototype=d.prototype=Object.create(y);e.prototype=B.constructor=f,f.constructor=e,f[u]=e.displayName="GeneratorFunction",w.isGeneratorFunction=function(a){var b="function"===typeof a&&a.constructor;return!!b&&(b===e||"GeneratorFunction"===(b.displayName||b.name))},w.mark=function(a){return Object.setPrototypeOf?Object.setPrototypeOf(a,f):(a.__proto__=f,!(u in a)&&(a[u]="GeneratorFunction")),a.prototype=Object.create(B),a},w.awrap=function(a){return{__await:a}},g(h.prototype),h.prototype[t]=function(){return this},w.AsyncIterator=h,w.async=function(a,c,d,e){var f=new h(b(a,c,d,e));return w.isGeneratorFunction(c)?f:f.next().then(function(a){return a.done?a.value:f.next()})},g(B),B[u]="Generator",B[s]=function(){return this},B.toString=function(){return"[object Generator]"},w.keys=function(a){var b=[];for(var c in a)b.push(c);return b.reverse(),function c(){for(;b.length;){var d=b.pop();if(d in a)return c.value=d,c.done=!1,c}return c.done=!0,c}},w.values=n,m.prototype={constructor:m,reset:function(a){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(l),!a)for(var b in this)"t"===b.charAt(0)&&q.call(this,b)&&!isNaN(+b.slice(1))&&(this[b]=void 0)},stop:function(){this.done=!0;var a=this.tryEntries[0],b=a.completion;if("throw"===b.type)throw b.arg;return this.rval},dispatchException:function(a){function b(b,d){return f.type="throw",f.arg=a,c.next=b,d&&(c.method="next",c.arg=void 0),!!d}if(this.done)throw a;for(var c=this,d=this.tryEntries.length-1;0<=d;--d){var e=this.tryEntries[d],f=e.completion;if("root"===e.tryLoc)return b("end");if(e.tryLoc<=this.prev){var g=q.call(e,"catchLoc"),h=q.call(e,"finallyLoc");if(g&&h){if(this.prev<e.catchLoc)return b(e.catchLoc,!0);if(this.prev<e.finallyLoc)return b(e.finallyLoc)}else if(g){if(this.prev<e.catchLoc)return b(e.catchLoc,!0);}else if(!h)throw new Error("try statement without catch or finally");else if(this.prev<e.finallyLoc)return b(e.finallyLoc)}}},abrupt:function(a,b){for(var c,d=this.tryEntries.length-1;0<=d;--d)if(c=this.tryEntries[d],c.tryLoc<=this.prev&&q.call(c,"finallyLoc")&&this.prev<c.finallyLoc){var e=c;break}e&&("break"===a||"continue"===a)&&e.tryLoc<=b&&b<=e.finallyLoc&&(e=null);var f=e?e.completion:{};return f.type=a,f.arg=b,e?(this.method="next",this.next=e.finallyLoc,x):this.complete(f)},complete:function(a,b){if("throw"===a.type)throw a.arg;return"break"===a.type||"continue"===a.type?this.next=a.arg:"return"===a.type?(this.rval=this.arg=a.arg,this.method="return",this.next="end"):"normal"===a.type&&b&&(this.next=b),x},finish:function(a){for(var b,c=this.tryEntries.length-1;0<=c;--c)if(b=this.tryEntries[c],b.finallyLoc===a)return this.complete(b.completion,b.afterLoc),l(b),x},catch:function(a){for(var b,c=this.tryEntries.length-1;0<=c;--c)if(b=this.tryEntries[c],b.tryLoc===a){var d=b.completion;if("throw"===d.type){var e=d.arg;l(b)}return e}throw new Error("illegal catch attempt")},delegateYield:function(a,b,c){return this.delegate={iterator:n(a),resultName:b,nextLoc:c},"next"===this.method&&(this.arg=void 0),x}}}(function(){return this}()||Function("return this")());</script><script>(function(a){function b(a){return q.typeof="function"===typeof Symbol&&"symbol"===typeof Symbol.iterator?b=function(a){return typeof a}:b=function(a){return a&&"function"===typeof Symbol&&a.constructor===Symbol&&a!==Symbol.prototype?"symbol":typeof a},b(a)}function c(a){function b(d,e){try{var f=a[d](e),g=f.value,h=g instanceof q.AwaitValue;Promise.resolve(h?g.wrapped:g).then(function(a){return h?void b("next",a):void c(f.done?"return":"normal",a)},function(a){b("throw",a)})}catch(a){c("throw",a)}}function c(a,c){switch(a){case"return":d.resolve({value:c,done:!0});break;case"throw":d.reject(c);break;default:d.resolve({value:c,done:!1});}d=d.next,d?b(d.key,d.arg):e=null}var d,e;this._invoke=function(a,c){return new Promise(function(f,g){var h={key:a,arg:c,resolve:f,reject:g,next:null};e?e=e.next=h:(d=e=h,b(a,c))})},"function"!==typeof a.return&&(this.return=void 0)}function d(a,b){for(var c,d=0;d<b.length;d++)c=b[d],c.enumerable=c.enumerable||!1,c.configurable=!0,"value"in c&&(c.writable=!0),Object.defineProperty(a,c.key,c)}function e(a,b){for(var c in b){var d=b[c];d.configurable=d.enumerable=!0,"value"in d&&(d.writable=!0),Object.defineProperty(a,c,d)}if(Object.getOwnPropertySymbols)for(var e=Object.getOwnPropertySymbols(b),f=0;f<e.length;f++){var g=e[f],d=b[g];d.configurable=d.enumerable=!0,"value"in d&&(d.writable=!0),Object.defineProperty(a,g,d)}return a}function f(a,b,c){return b in a?Object.defineProperty(a,b,{value:c,enumerable:!0,configurable:!0,writable:!0}):a[b]=c,a}function g(){return q.extends=g=Object.assign||function(a){for(var b,c=1;c<arguments.length;c++)for(var d in b=arguments[c],b)Object.prototype.hasOwnProperty.call(b,d)&&(a[d]=b[d]);return a},g.apply(this,arguments)}function h(a){return q.getPrototypeOf=h=Object.setPrototypeOf?Object.getPrototypeOf:function(a){return a.__proto__||Object.getPrototypeOf(a)},h(a)}function i(a,b){return q.setPrototypeOf=i=Object.setPrototypeOf||function(a,b){return a.__proto__=b,a},i(a,b)}function j(){if("undefined"===typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"===typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],function(){})),!0}catch(a){return!1}}function k(){return q.construct=j()?k=Reflect.construct:k=function(b,c,d){var e=[null];e.push.apply(e,c);var a=Function.bind.apply(b,e),f=new a;return d&&q.setPrototypeOf(f,d.prototype),f},k.apply(null,arguments)}function l(a){var b="function"===typeof Map?new Map:void 0;return q.wrapNativeSuper=l=function(a){function c(){return q.construct(a,arguments,q.getPrototypeOf(this).constructor)}if(null===a)return null;if("function"!==typeof a)throw new TypeError("Super expression must either be null or a function");if("undefined"!==typeof b){if(b.has(a))return b.get(a);b.set(a,c)}return c.prototype=Object.create(a.prototype,{constructor:{value:c,enumerable:!1,writable:!0,configurable:!0}}),q.setPrototypeOf(c,a)},l(a)}function m(a,b,c){return q.get="undefined"!==typeof Reflect&&Reflect.get?m=Reflect.get:m=function(a,b,c){var d=q.superPropBase(a,b);if(d){var e=Object.getOwnPropertyDescriptor(d,b);return e.get?e.get.call(c):e.value}},m(a,b,c||a)}function n(a,b,c,d){return n="undefined"!==typeof Reflect&&Reflect.set?Reflect.set:function(a,b,c,d){var e,f=q.superPropBase(a,b);if(f){if(e=Object.getOwnPropertyDescriptor(f,b),e.set)return e.set.call(d,c),!0;if(!e.writable)return!1}if(e=Object.getOwnPropertyDescriptor(d,b),e){if(!e.writable)return!1;e.value=c,Object.defineProperty(d,b,e)}else q.defineProperty(d,b,c);return!0},n(a,b,c,d)}function o(a,b,c,d,e){var f=n(a,b,c,d||a);if(!f&&e)throw new Error("failed to set property");return c}function p(a){if(Symbol.iterator in Object(a)||"[object Arguments]"===Object.prototype.toString.call(a))return Array.from(a)}var q=a.babelHelpers={};q.typeof=b,q.asyncIterator=function(a){var b;if("function"===typeof Symbol){if(Symbol.asyncIterator&&(b=a[Symbol.asyncIterator],null!=b))return b.call(a);if(Symbol.iterator&&(b=a[Symbol.iterator],null!=b))return b.call(a)}throw new TypeError("Object is not async iterable")},q.AwaitValue=function(a){this.wrapped=a},"function"===typeof Symbol&&Symbol.asyncIterator&&(c.prototype[Symbol.asyncIterator]=function(){return this}),c.prototype.next=function(a){return this._invoke("next",a)},c.prototype.throw=function(a){return this._invoke("throw",a)},c.prototype.return=function(a){return this._invoke("return",a)},q.AsyncGenerator=c,q.wrapAsyncGenerator=function(a){return function(){return new q.AsyncGenerator(a.apply(this,arguments))}},q.awaitAsyncGenerator=function(a){return new q.AwaitValue(a)},q.asyncGeneratorDelegate=function(a,b){function c(c,d){return e=!0,d=new Promise(function(b){b(a[c](d))}),{done:!1,value:b(d)}}var d={},e=!1;return"function"===typeof Symbol&&Symbol.iterator&&(d[Symbol.iterator]=function(){return this}),d.next=function(a){return e?(e=!1,a):c("next",a)},"function"===typeof a.throw&&(d.throw=function(a){if(e)throw e=!1,a;return c("throw",a)}),"function"===typeof a.return&&(d.return=function(a){return c("return",a)}),d},q.asyncToGenerator=function(a){return function(){var b=this,c=arguments;return new Promise(function(d,e){function f(a,b){try{var c=i[a](b),f=c.value}catch(a){return void e(a)}c.done?d(f):Promise.resolve(f).then(g,h)}function g(a){f("next",a)}function h(a){f("throw",a)}var i=a.apply(b,c);g()})}},q.classCallCheck=function(a,b){if(!(a instanceof b))throw new TypeError("Cannot call a class as a function")},q.createClass=function(a,b,c){return b&&d(a.prototype,b),c&&d(a,c),a},q.defineEnumerableProperties=e,q.defaults=function(a,b){for(var c=Object.getOwnPropertyNames(b),d=0;d<c.length;d++){var e=c[d],f=Object.getOwnPropertyDescriptor(b,e);f&&f.configurable&&a[e]===void 0&&Object.defineProperty(a,e,f)}return a},q.defineProperty=f,q.extends=g,q.objectSpread=function(a){for(var b=1;b<arguments.length;b++){var c=null==arguments[b]?{}:arguments[b],d=Object.keys(c);"function"===typeof Object.getOwnPropertySymbols&&(d=d.concat(Object.getOwnPropertySymbols(c).filter(function(a){return Object.getOwnPropertyDescriptor(c,a).enumerable}))),d.forEach(function(b){q.defineProperty(a,b,c[b])})}return a},q.inherits=function(a,b){if("function"!==typeof b&&null!==b)throw new TypeError("Super expression must either be null or a function");a.prototype=Object.create(b&&b.prototype,{constructor:{value:a,writable:!0,configurable:!0}}),b&&q.setPrototypeOf(a,b)},q.getPrototypeOf=h,q.setPrototypeOf=i,q.construct=k,q.wrapNativeSuper=l,q.instanceof=function(a,b){return null!=b&&"undefined"!==typeof Symbol&&b[Symbol.hasInstance]?b[Symbol.hasInstance](a):a instanceof b},q.interopRequireDefault=function(a){return a&&a.__esModule?a:{default:a}},q.interopRequireWildcard=function(a){if(a&&a.__esModule)return a;var b={};if(null!=a)for(var c in a)if(Object.prototype.hasOwnProperty.call(a,c)){var d=Object.defineProperty&&Object.getOwnPropertyDescriptor?Object.getOwnPropertyDescriptor(a,c):{};d.get||d.set?Object.defineProperty(b,c,d):b[c]=a[c]}return b.default=a,b},q.newArrowCheck=function(a,b){if(a!==b)throw new TypeError("Cannot instantiate an arrow function")},q.objectDestructuringEmpty=function(a){if(null==a)throw new TypeError("Cannot destructure undefined")},q.objectWithoutProperties=function(a,b){if(null==a)return{};var c,d,e={},f=Object.keys(a);for(d=0;d<f.length;d++)c=f[d],0<=b.indexOf(c)||(e[c]=a[c]);if(Object.getOwnPropertySymbols){var g=Object.getOwnPropertySymbols(a);for(d=0;d<g.length;d++)c=g[d],!(0<=b.indexOf(c))&&Object.prototype.propertyIsEnumerable.call(a,c)&&(e[c]=a[c])}return e},q.assertThisInitialized=function(a){if(void 0===a)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return a},q.possibleConstructorReturn=function(a,b){return b&&("object"===typeof b||"function"===typeof b)?b:q.assertThisInitialized(a)},q.superPropBase=function(a,b){for(;!Object.prototype.hasOwnProperty.call(a,b)&&(a=q.getPrototypeOf(a),null!==a););return a},q.get=m,q.set=o,q.taggedTemplateLiteral=function(a,b){return b||(b=a.slice(0)),Object.freeze(Object.defineProperties(a,{raw:{value:Object.freeze(b)}}))},q.temporalRef=function(a,b){if(a===q.temporalUndefined)throw new ReferenceError(b+" is not defined - temporal dead zone");else return a},q.readOnlyError=function(a){throw new Error("\""+a+"\" is read-only")},q.temporalUndefined={},q.slicedToArray=function(a,b){return q.arrayWithHoles(a)||q.iterableToArrayLimit(a,b)||q.nonIterableRest()},q.toArray=function(a){return q.arrayWithHoles(a)||q.iterableToArray(a)||q.nonIterableRest()},q.toConsumableArray=function(a){return q.arrayWithoutHoles(a)||q.iterableToArray(a)||q.nonIterableSpread()},q.arrayWithoutHoles=function(a){if(Array.isArray(a)){for(var b=0,c=Array(a.length);b<a.length;b++)c[b]=a[b];return c}},q.arrayWithHoles=function(a){if(Array.isArray(a))return a},q.iterableToArray=p,q.iterableToArrayLimit=function(a,b){var c=[],d=!0,e=!1,f=void 0;try{for(var g,h=a[Symbol.iterator]();!(d=(g=h.next()).done)&&(c.push(g.value),!(b&&c.length===b));d=!0);}catch(a){e=!0,f=a}finally{try{d||null==h["return"]||h["return"]()}finally{if(e)throw f}}return c},q.nonIterableSpread=function(){throw new TypeError("Invalid attempt to spread non-iterable instance")},q.nonIterableRest=function(){throw new TypeError("Invalid attempt to destructure non-iterable instance")},q.toPropertyKey=function(a){return"symbol"===typeof a?a:a+""}})("undefined"===typeof global?self:global);</script><script>if(!window.customElements){document.write("<!--")}</script><script type="text/javascript" src="/bower_components/webcomponentsjs/custom-elements-es5-adapter.js"></script><!--! do not remove --><script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.4/svg.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script><script src="/bower_components/particles.js/particles.min.js"></script><link rel="import" href="/src/at-app/at-app.html"><link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"><style>html,
-    body{margin:0;padding:0;display:block;width:100%;height:100%;font-family:'Montserrat', sans-serif;}#myIdName{position:fixed;top:0;left:0;bottom:0;right:0;width:100%;height:100vh;}</style><script src="charming.min.js"></script></head><body><div id="myIdName"></div><at-app></at-app><script>particlesJS("myIdName",{particles:{number:{value:168},color:{value:["#FFB74D","#FF5252","#7C4DFF","#00B8D4"]},shape:{type:"circle"},opacity:{value:1,random:!1,anim:{enable:!1}},size:{value:4,random:!0,anim:{enable:!1}},line_linked:{enable:!1},move:{enable:!0,speed:4,direction:"none",random:!0,straight:!1,out_mode:"out"}},interactivity:{detect_on:"canvas",events:{onhover:{enable:!1},onclick:{enable:!1},resize:!0}},retina_detect:!0});</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arthur Tressol — Senior web engineer</title>
+<meta name="description" content="Senior web engineer in Montréal and co-founder of KaribouLab Inc. I build products end to end, with AI agents as part of the craft.">
+<meta name="author" content="Arthur Tressol">
+<link rel="canonical" href="https://arthurtressol.me/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arthurtressol.me/">
+<meta property="og:title" content="Arthur Tressol — Senior web engineer">
+<meta property="og:description" content="Senior web engineer in Montréal and co-founder of KaribouLab Inc. I build products end to end, with AI agents as part of the craft.">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0b0b0d">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<nav class="nav">
+  <a class="nav-mark" href="#top" aria-label="Arthur Tressol">AT</a>
+  <div class="nav-links">
+    <a href="#craft" data-i18n="nav.craft">Craft</a>
+    <a href="#ai" data-i18n="nav.ai">AI</a>
+    <a href="#kariboulab">KaribouLab</a>
+    <a href="#path" data-i18n="nav.path">Path</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
+  </div>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-lang="en" aria-pressed="true">EN</button>
+    <span aria-hidden="true">/</span>
+    <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ── Hero ───────────────────────────────────────────── -->
+  <header class="hero" id="top">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <p class="eyebrow" data-i18n="hero.eyebrow">Montréal, Canada</p>
+    <h1 class="hero-name">Arthur&nbsp;Tressol</h1>
+    <p class="hero-role">
+      <span data-i18n="hero.role">Senior web engineer</span>
+      <span class="dot" aria-hidden="true">·</span>
+      <span data-i18n="hero.cofounder">Co-founder of <strong>KaribouLab&nbsp;Inc.</strong></span>
+    </p>
+    <p class="hero-lead" data-i18n="hero.lead">
+      I build products end to end — from the data model to the last pixel.
+      Twelve years of shipping web software, now with AI agents as part of the craft.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#kariboulab" data-i18n="hero.cta1">See what I build</a>
+      <a class="btn" href="#contact" data-i18n="hero.cta2">Get in touch</a>
+    </div>
+  </header>
+
+  <!-- ── Craft ──────────────────────────────────────────── -->
+  <section class="section" id="craft">
+    <p class="label"><span class="num">01</span> <span data-i18n="craft.label">Craft</span></p>
+    <div class="split">
+      <h2 class="h2" data-i18n="craft.title">The whole stack, or it isn't a product.</h2>
+      <div class="prose">
+        <p data-i18n="craft.p1">
+          Twelve years of web development: interfaces embedded inside building automation
+          controllers, applications used by thousands of users, REST and GraphQL APIs, and
+          frontend architecture that became the company standard.
+        </p>
+        <p data-i18n="craft.p2">
+          The frontend is where my heart is — but a feature isn't done because the screen
+          renders. I own the schema, the API, the interface and the ship. That end-to-end
+          view is what makes the trade-offs obvious instead of expensive.
+        </p>
+      </div>
+    </div>
+
+    <ul class="tools" aria-label="Toolbox">
+      <li>TypeScript</li><li>React</li><li>Next.js</li><li>React Native · Expo</li>
+      <li>GraphQL</li><li>Node</li><li>Convex</li><li>Java</li>
+      <li>PostgreSQL</li><li>Tailwind</li><li>Web Components</li><li>Claude Code</li>
+    </ul>
+  </section>
+
+  <!-- ── AI ─────────────────────────────────────────────── -->
+  <section class="section" id="ai">
+    <p class="label"><span class="num">02</span> <span data-i18n="ai.label">Working with AI</span></p>
+    <div class="split">
+      <h2 class="h2" data-i18n="ai.title">Engineering with AI, not around it.</h2>
+      <div class="prose">
+        <p data-i18n="ai.p1">
+          AI didn't replace the engineering — it moved where the work happens. I design the
+          system, write the spec, then run agents against it. My whole setup is built on that:
+          a product brain that holds the vision, roadmap and feature specs; coding agents that
+          implement against those specs; reviews that keep the bar where it belongs.
+        </p>
+        <p data-i18n="ai.p2">
+          It's the reason a very small team keeps several products in flight at once.
+        </p>
+      </div>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <h3 data-i18n="ai.c1.t">Specs before code</h3>
+        <p data-i18n="ai.c1.d">Every feature is a written spec with acceptance criteria and edge cases before a line exists. Agents implement against it — nothing gets guessed.</p>
+      </article>
+      <article class="card">
+        <h3 data-i18n="ai.c2.t">Agentic workflows</h3>
+        <p data-i18n="ai.c2.d">Tickets flow to autonomous agents that branch, build, and open PRs. I orchestrate the pipeline and review what comes out of it.</p>
+      </article>
+      <article class="card">
+        <h3 data-i18n="ai.c3.t">Judgment stays human</h3>
+        <p data-i18n="ai.c3.d">Architecture, trade-offs, and deciding what's worth building are still mine. AI is leverage — it is not autopilot.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── KaribouLab ─────────────────────────────────────── -->
+  <section class="section" id="kariboulab">
+    <p class="label"><span class="num">03</span> <span data-i18n="kl.label">Co-founder</span></p>
+    <div class="split">
+      <h2 class="h2">KaribouLab&nbsp;Inc.</h2>
+      <div class="prose">
+        <p data-i18n="kl.p1">
+          A Montréal product studio building small, sharp apps — mobile, web, and now and
+          then the tool we needed ourselves. Shared foundations across every project and an
+          AI-first development process: that's what lets a tiny team keep a real portfolio
+          moving.
+        </p>
+        <p><a class="link" href="https://kariboulab.com" target="_blank" rel="noopener">kariboulab.com <span aria-hidden="true">↗</span></a></p>
+      </div>
+    </div>
+
+    <ul class="products">
+      <li class="product">
+        <h3>EchoStep</h3>
+        <p data-i18n="kl.p.echostep">A step-counting game. Daily steps become in-game currency, leaderboards, challenges.</p>
+        <span class="tag">Expo · React Native</span>
+      </li>
+      <li class="product">
+        <h3>PanelMap</h3>
+        <p data-i18n="kl.p.panelmap">Map your electrical breaker panel once, and never guess which switch does what again.</p>
+        <span class="tag">Expo · React Native</span>
+      </li>
+      <li class="product">
+        <h3><a class="product-link" href="https://chromewebstore.google.com/detail/gitlab-plus/ibnlakobjhdnpajnlhgmfnhpfilaekbp" target="_blank" rel="noopener">GitLab Plus <span aria-hidden="true">↗</span></a></h3>
+        <p data-i18n="kl.p.gitlabplus">A Chrome extension for merge request workflows — quick filters, reviewer presets, MR age badges and one-click approve.</p>
+        <span class="tag">Chrome · Manifest V3</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ── Path ───────────────────────────────────────────── -->
+  <section class="section" id="path">
+    <p class="label"><span class="num">04</span> <span data-i18n="path.label">Path</span></p>
+    <h2 class="h2 h2-wide" data-i18n="path.title">Where I've built things.</h2>
+
+    <ol class="timeline">
+      <li class="entry">
+        <div class="entry-head">
+          <h3>Facturation.net <span class="muted">— Facnet</span></h3>
+          <span class="badge" data-i18n="path.facnet.when">2025 → now</span>
+        </div>
+        <p class="entry-role" data-i18n="path.facnet.role">Senior frontend engineer · Team lead</p>
+        <p data-i18n="path.facnet.d">
+          Billing and invoicing software that Québec businesses run their day on. Frontend
+          architecture and the product work around it — the kind of software where correctness
+          is not negotiable.
+        </p>
+      </li>
+      <li class="entry">
+        <div class="entry-head">
+          <h3>WorkJam</h3>
+          <span class="badge badge-quiet" data-i18n="path.workjam.when">2019 → 2025 · 6 years</span>
+        </div>
+        <p class="entry-role" data-i18n="path.workjam.role">Team lead · Technical lead, web platform · Senior frontend engineer</p>
+        <p data-i18n="path.workjam.d">
+          The digital frontline workplace — scheduling, tasks and communication for enterprise
+          teams, at the scale of millions of hourly workers. I arrived as a senior frontend
+          engineer, took technical ownership of the web platform, then led the team: GraphQL
+          APIs, architecture decisions, and the people side of shipping.
+        </p>
+      </li>
+      <li class="entry">
+        <div class="entry-head">
+          <h3>Distech Controls <span class="muted">— Acuity Brands</span></h3>
+          <span class="badge badge-quiet" data-i18n="path.distech.when">2014 → 2019 · 5 years</span>
+        </div>
+        <p class="entry-role" data-i18n="path.distech.role">Software engineer, frontend &amp; backend</p>
+        <p data-i18n="path.distech.d">
+          Building automation. I built the embedded web platform living inside the controllers
+          in the ceiling: a Java/Jetty REST API and a configuration and diagnostics app in
+          Polymer and Web Components — the architecture that went on to become the company's
+          frontend standard. Then a React dashboard putting a building's energy consumption
+          in front of the people paying for it, in real time.
+        </p>
+      </li>
+      <li class="entry">
+        <div class="entry-head">
+          <h3 data-i18n="path.edu.t">Engineering school</h3>
+        </div>
+        <p class="entry-role">ESIGETEL <span class="muted">Paris</span> · ÉTS <span class="muted">Montréal</span> · Staffordshire University <span class="muted">UK</span></p>
+        <p data-i18n="path.edu.d">
+          A French engineering degree oriented toward cloud and software, with exchanges in
+          England and in Montréal. The Montréal one stuck — I never left.
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ── Contact ────────────────────────────────────────── -->
+  <section class="section section-contact" id="contact">
+    <p class="label"><span class="num">05</span> <span data-i18n="contact.label">Contact</span></p>
+    <h2 class="h2 h2-wide" data-i18n="contact.title">Let's talk about what you're building.</h2>
+    <p class="prose prose-wide" data-i18n="contact.p">
+      Open to a conversation — a product, a role, or an idea you want stress-tested.
+    </p>
+    <ul class="contact-links">
+      <li><a href="mailto:arthur.tressol@gmail.com">Email <span aria-hidden="true">↗</span></a></li>
+      <li><a href="https://github.com/caribouflex" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></li>
+      <li><a href="https://www.linkedin.com/in/arthurtressol/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a></li>
+      <li><a href="https://kariboulab.com" target="_blank" rel="noopener">KaribouLab <span aria-hidden="true">↗</span></a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year">2026</span> Arthur Tressol</p>
+  <p data-i18n="footer.made">Built in Montréal <span aria-hidden="true">·</span> hand-written, no framework</p>
+</footer>
+
+<script src="/i18n.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

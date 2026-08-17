@@ -1,7 +1,12 @@
 {
-  "name": "arthur-tressol",
-  "short_name": "arthur-tressol",
-  "description": "My portfolio and cursus",
+  "name": "Arthur Tressol",
+  "short_name": "Arthur Tressol",
+  "description": "Senior web engineer in Montréal. Co-founder of KaribouLab Inc.",
   "start_url": "/",
-  "display": "standalone"
+  "display": "standalone",
+  "background_color": "#0b0b0d",
+  "theme_color": "#0b0b0d",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
 }
